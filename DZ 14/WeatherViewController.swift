@@ -34,7 +34,7 @@ class WeatherViewController: UIViewController {
         
         getRealmWeather()
         
-        let seconds = 1.0
+        let seconds = 1.5
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + seconds) {
             guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=101000&lang=en&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric") else { return }
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in

@@ -25,7 +25,7 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         realm = try! Realm()
         
-        let seconds = 1.0
+        let seconds = 1.5
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + seconds) {
     Alamofire.request("https://api.openweathermap.org/data/2.5/forecast?q=moscow,ru&appid=5a06c113652fc9950fab13d490740cc7&units=metric").responseJSON { response in
             let result = response.result
